@@ -6,13 +6,7 @@ const nextConfig = {
   // Optimize image handling
   images: {
     domains: ['static.coingecko.com', 'assets.coingecko.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-    unoptimized: process.env.NODE_ENV === 'development'
+    unoptimized: true
   },
   
   // Remove console logs in production (except errors)
