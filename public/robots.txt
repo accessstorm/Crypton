@@ -1,0 +1,9 @@
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+
+# Sitemap location (create and add this later)
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Disallow API routes
+Disallow: /api/ 

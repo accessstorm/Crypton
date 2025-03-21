@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: crypton
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      - key: NEXT_PUBLIC_GEMINI_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_COINGECKO_API_KEY
+        sync: false 

@@ -1,0 +1,57 @@
+{
+  "name": "Crypton - AI-Powered Crypto & Stock Dashboard",
+  "short_name": "Crypton",
+  "description": "Track cryptocurrencies and stocks with real-time data, AI predictions, and market sentiment analysis.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020817",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "web",
+      "label": "Crypton Dashboard on Desktop"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "web",
+      "label": "Crypton Dashboard on Mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View market overview and stats",
+      "url": "/dashboard",
+      "icons": [{ "src": "/shortcut-dashboard.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "AI Predictions",
+      "short_name": "AI",
+      "description": "Check AI-powered market predictions",
+      "url": "/dashboard?tab=sentiment",
+      "icons": [{ "src": "/shortcut-ai.png", "sizes": "96x96" }]
+    }
+  ],
+  "categories": ["finance", "cryptocurrency", "productivity"]
+} 
