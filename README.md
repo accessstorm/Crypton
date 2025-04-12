@@ -1,3 +1,5 @@
+Goto main branch(https://github.com/accessstorm/Crypton/tree/main) for Video or click here : https://youtu.be/F-acE_ISw5Y
+
 # Crypton
 
 A modern cryptocurrency and stock market dashboard with AI-powered predictions and real-time data visualization.
