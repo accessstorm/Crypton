@@ -36,8 +36,9 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
               className="w-full"
               onValueChange={handleTabChange}
             >
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="/dashboard">Dashboard</TabsTrigger>
+                <TabsTrigger value="/dashboard/ai-agent">AI Agent</TabsTrigger>
                 <TabsTrigger value="/crypto">Crypto</TabsTrigger>
                 <TabsTrigger value="/stocks">Stocks</TabsTrigger>
               </TabsList>

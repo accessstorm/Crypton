@@ -46,6 +46,11 @@ function Navigation() {
       icon: <Home className="h-5 w-5" />,
     },
     {
+      name: "AI Agent",
+      href: "/dashboard/ai-agent",
+      icon: <Brain className="h-5 w-5" />,
+    },
+    {
       name: "Crypto",
       href: "/crypto",
       icon: <Bitcoin className="h-5 w-5" />,
@@ -59,11 +64,6 @@ function Navigation() {
       name: "Market Sentiment",
       href: "/dashboard?tab=sentiment",
       icon: <MessageSquare className="h-5 w-5" />,
-    },
-    {
-      name: "AI Predictions",
-      href: "/dashboard?tab=sentiment",
-      icon: <Brain className="h-5 w-5" />,
     },
     {
       name: "Your Watchlist",

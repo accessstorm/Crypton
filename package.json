@@ -31,6 +31,7 @@
     "critters": "^0.0.23",
     "crypton": "file:",
     "date-fns": "^4.1.0",
+    "framer-motion": "^12.6.5",
     "lucide-react": "^0.483.0",
     "marked": "^15.0.7",
     "next": "15.2.3",

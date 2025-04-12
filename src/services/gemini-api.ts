@@ -29,9 +29,9 @@ const processMarkdown = (text: string): string => {
       .replace(/<ul>/g, '<ul class="list-disc pl-5 my-2">')
       .replace(/<ol>/g, '<ol class="list-decimal pl-5 my-2">')
       // Style code blocks
-      .replace(/<pre><code>/g, '<pre class="bg-muted/30 p-2 rounded-md text-xs my-2 overflow-x-auto"><code class="font-mono">')
+      .replace(/<pre><code>/g, '<pre class="bg-muted/30 dark:bg-muted/50 p-2 rounded-md text-xs my-2 overflow-y-auto max-h-[300px] whitespace-pre-wrap break-words"><code class="font-mono">')
       // Style inline code
-      .replace(/<code>/g, '<code class="font-mono bg-muted/20 px-1 rounded text-xs">')
+      .replace(/<code>/g, '<code class="font-mono bg-muted/20 dark:bg-muted/40 px-1 rounded text-xs">')
       // Style table
       .replace(/<table>/g, '<table class="border-collapse w-full text-xs my-2">')
       .replace(/<th>/g, '<th class="border border-border/30 p-1 bg-muted/30">')

@@ -10,7 +10,18 @@ A modern cryptocurrency and stock market dashboard with AI-powered predictions a
 - **AI-Powered Predictions**: Get future price predictions for major cryptocurrencies
 - **Market Sentiment Analysis**: Understand market sentiment through data-driven insights
 - **Personalized Watchlist**: Create and monitor your own custom asset list
-- **Gemini AI Chat**: Ask questions and get market insights from an AI assistant
+- **AI Crypto Assistant**: Chat with an intelligent assistant powered by Google Gemini Pro
+- **Dark/Light Theme**: Switch between dark and light modes for comfortable viewing
+
+## AI Crypto Assistant
+
+The AI Crypto Assistant feature offers:
+
+- Natural language interactions about cryptocurrency topics
+- Real-time Bitcoin data integration for up-to-date analysis
+- Educational content about blockchain and cryptocurrency concepts
+- Support for both dark and light theme modes
+- Planned support for local model fallbacks using llama.cpp or Ollama
 
 ## Tech Stack
 
@@ -79,20 +90,31 @@ crypton/
 ├── public/            # Static assets
 ├── src/               # Source code
 │   ├── app/           # Next.js app directory
+│   │   ├── dashboard/ # Dashboard pages
+│   │   │   ├── ai-agent/  # AI Agent feature
 │   ├── components/    # Reusable components
 │   │   ├── charts/    # Chart components
 │   │   ├── dashboard/ # Dashboard components
 │   │   ├── layouts/   # Layout components
 │   │   ├── ui/        # UI components (Shadcn)
-│   │   ├── lib/       # Utility functions
-│   │   ├── services/  # API services
-│   │   ├── store/     # State management
-│   │   ├── styles/    # Global styles
-│   ├── .env.example   # Example environment variables
-│   ├── next.config.js # Next.js configuration
-│   ├── package.json   # Dependencies and scripts
-│   └── README.md      # Project documentation
+│   ├── lib/           # Utility functions
+│   ├── services/      # API services
+│   │   ├── gemini-api.ts  # Google Gemini integration
+│   ├── store/         # State management
+│   ├── styles/        # Global styles
+├── .env.example       # Example environment variables
+├── next.config.js     # Next.js configuration
+├── package.json       # Dependencies and scripts
+└── README.md          # Project documentation
 ```
+
+## Recent Updates
+
+- Added AI Crypto Assistant powered by Google Gemini Pro
+- Integrated real-time Bitcoin data with AI responses
+- Improved dark/light theme toggle functionality
+- Enhanced UI responsiveness and fixed overflow issues in chat interface
+- Added code block formatting for better readability
 
 ## Deployment to Render
 

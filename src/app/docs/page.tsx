@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { 
   BarChart3, 
-  Bitcoin, 
   TrendingUp, 
   FileText, 
   ExternalLink, 
@@ -83,6 +82,26 @@ function DocsContent() {
                 It provides real-time data visualization for cryptocurrencies and stocks, 
                 along with AI-powered sentiment analysis and market predictions.
               </p>
+              
+              <Alert className="bg-primary/5 border border-primary/20">
+                <Brain className="h-4 w-4 text-primary" />
+                <AlertTitle>New Feature: AI Crypto Assistant</AlertTitle>
+                <AlertDescription>
+                  Our new AI Crypto Assistant powered by Google Gemini Pro provides intelligent analysis of cryptocurrency markets with real-time BTC data integration.
+                </AlertDescription>
+              </Alert>
+              
+              <Alert className="bg-muted/30 border border-muted">
+                <div className="flex items-center gap-1">
+                  <div className="bg-black rounded-full p-1">
+                    <div className="bg-white rounded-full w-2 h-2"></div>
+                  </div>
+                </div>
+                <AlertTitle>Improved Theme Toggle</AlertTitle>
+                <AlertDescription>
+                  Enhanced dark/light theme switching with persistent preferences and optimized styling throughout the application.
+                </AlertDescription>
+              </Alert>
               
               <Alert>
                 <RefreshCw className="h-4 w-4" />
@@ -215,6 +234,41 @@ function DocsContent() {
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="h-4 w-4 text-purple-500 mt-1" />
                     <span>Client-side ML processing for data privacy</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-l-4 border-l-indigo-500">
+              <CardHeader>
+                <div className="flex items-center gap-2">
+                  <Brain className="h-5 w-5 text-indigo-500" />
+                  <CardTitle>AI Crypto Assistant</CardTitle>
+                </div>
+                <CardDescription>
+                  Intelligent chat assistant for crypto analysis and insights
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="leading-relaxed">
+                  Interact with our AI assistant powered by Google Gemini Pro to get real-time crypto analysis and educational content.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mt-1" />
+                    <span>Ask questions about cryptocurrencies in natural language</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mt-1" />
+                    <span>Real-time Bitcoin data integration for up-to-date insights</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mt-1" />
+                    <span>Contextual responses with educational content</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-indigo-500 mt-1" />
+                    <span>Open-source fallback options with local models (coming soon)</span>
                   </li>
                 </ul>
               </CardContent>
@@ -400,85 +454,104 @@ function DocsContent() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <Bitcoin className="h-5 w-5 text-orange-500" />
-                    <h3 className="text-lg font-medium">CoinGecko API</h3>
-                  </div>
-                  <p>
-                    CoinGecko provides cryptocurrency data including prices, market caps, 
-                    volume, and more. Crypton uses CoinGecko API for all cryptocurrency data.
-                  </p>
-                  <div className="bg-muted p-4 rounded-md">
-                    <p className="text-sm font-medium">Endpoints used:</p>
-                    <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
-                      <li>Global market data</li>
-                      <li>Cryptocurrency listings</li>
-                      <li>Historical price data</li>
-                      <li>Market charts</li>
-                    </ul>
-                  </div>
-                </div>
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-7">
+                  <AccordionTrigger className="text-lg font-medium">Google Gemini API</AccordionTrigger>
+                  <AccordionContent className="space-y-2">
+                    <p>
+                      Google Gemini API powers the AI Crypto Assistant feature, providing intelligent 
+                      responses to user queries about cryptocurrency markets, blockchain technology, 
+                      and investment strategies.
+                    </p>
+                    <p className="text-muted-foreground mt-2">
+                      Integration features: Natural language understanding, markdown-formatted responses, 
+                      contextual awareness with live BTC data, and graceful fallbacks.
+                    </p>
+                    <div className="mt-4 border-t pt-4">
+                      <h4 className="font-medium">Implementation Details:</h4>
+                      <ul className="mt-2 space-y-1 text-sm">
+                        <li>• Uses the latest gemini-1.5-pro model with fallback to gemini-1.0-pro</li>
+                        <li>• Implements a chat interface with user-friendly markdown rendering</li>
+                        <li>• Provides system context with real-time BTC data for accurate responses</li>
+                        <li>• Supports both light and dark mode themes</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-8">
+                  <AccordionTrigger className="text-lg font-medium">CoinGecko API</AccordionTrigger>
+                  <AccordionContent className="space-y-2">
+                    <p>
+                      CoinGecko provides cryptocurrency data including prices, market caps, 
+                      volume, and more. Crypton uses CoinGecko API for all cryptocurrency data.
+                    </p>
+                    <div className="bg-muted p-4 rounded-md">
+                      <p className="text-sm font-medium">Endpoints used:</p>
+                      <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
+                        <li>Global market data</li>
+                        <li>Cryptocurrency listings</li>
+                        <li>Historical price data</li>
+                        <li>Market charts</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
                 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="h-5 w-5 text-green-500" />
-                    <h3 className="text-lg font-medium">Mock Stock API</h3>
-                  </div>
-                  <p>
-                    For demonstration purposes, Crypton uses a mock API for stock market data. 
-                    In a production environment, this could be replaced with a real stock 
-                    market API like Alpha Vantage, Yahoo Finance, or IEX Cloud.
-                  </p>
-                  <div className="bg-muted p-4 rounded-md">
-                    <p className="text-sm font-medium">Simulated data:</p>
-                    <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
-                      <li>Top stocks listings</li>
-                      <li>Historical stock prices</li>
-                      <li>Market indicators</li>
-                    </ul>
-                  </div>
-                </div>
+                <AccordionItem value="item-9">
+                  <AccordionTrigger className="text-lg font-medium">Mock Stock API</AccordionTrigger>
+                  <AccordionContent className="space-y-2">
+                    <p>
+                      For demonstration purposes, Crypton uses a mock API for stock market data. 
+                      In a production environment, this could be replaced with a real stock 
+                      market API like Alpha Vantage, Yahoo Finance, or IEX Cloud.
+                    </p>
+                    <div className="bg-muted p-4 rounded-md">
+                      <p className="text-sm font-medium">Simulated data:</p>
+                      <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
+                        <li>Top stocks listings</li>
+                        <li>Historical stock prices</li>
+                        <li>Market indicators</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
                 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <MessageSquare className="h-5 w-5 text-blue-500" />
-                    <h3 className="text-lg font-medium">Sentiment Analysis</h3>
-                  </div>
-                  <p>
-                    Crypton uses the Sentiment npm package to analyze social media content
-                    and news articles for market sentiment assessment.
-                  </p>
-                  <div className="bg-muted p-4 rounded-md">
-                    <p className="text-sm font-medium">Features:</p>
-                    <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
-                      <li>Social media sentiment scoring</li>
-                      <li>Keyword extraction</li>
-                      <li>Market mood indicators</li>
-                    </ul>
-                  </div>
-                </div>
+                <AccordionItem value="item-10">
+                  <AccordionTrigger className="text-lg font-medium">Sentiment Analysis</AccordionTrigger>
+                  <AccordionContent className="space-y-2">
+                    <p>
+                      Crypton uses the Sentiment npm package to analyze social media content
+                      and news articles for market sentiment assessment.
+                    </p>
+                    <div className="bg-muted p-4 rounded-md">
+                      <p className="text-sm font-medium">Features:</p>
+                      <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
+                        <li>Social media sentiment scoring</li>
+                        <li>Keyword extraction</li>
+                        <li>Market mood indicators</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
                 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <Brain className="h-5 w-5 text-purple-500" />
-                    <h3 className="text-lg font-medium">TensorFlow.js Models</h3>
-                  </div>
-                  <p>
-                    Crypton implements TensorFlow.js for client-side machine learning
-                    to provide price predictions and risk assessment metrics.
-                  </p>
-                  <div className="bg-muted p-4 rounded-md">
-                    <p className="text-sm font-medium">Capabilities:</p>
-                    <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
-                      <li>Price movement forecasting</li>
-                      <li>Volatility assessment</li>
-                      <li>Market risk evaluation</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                <AccordionItem value="item-11">
+                  <AccordionTrigger className="text-lg font-medium">TensorFlow.js Models</AccordionTrigger>
+                  <AccordionContent className="space-y-2">
+                    <p>
+                      Crypton implements TensorFlow.js for client-side machine learning
+                      to provide price predictions and risk assessment metrics.
+                    </p>
+                    <div className="bg-muted p-4 rounded-md">
+                      <p className="text-sm font-medium">Capabilities:</p>
+                      <ul className="list-disc pl-6 space-y-1 mt-2 text-sm text-muted-foreground">
+                        <li>Price movement forecasting</li>
+                        <li>Volatility assessment</li>
+                        <li>Market risk evaluation</li>
+                      </ul>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CardContent>
           </Card>
         </TabsContent>
@@ -602,7 +675,7 @@ function DocsContent() {
   );
 }
 
-// Loading fallback component
+// Loading component for the docs page
 function DocsLoading() {
   return (
     <div className="flex items-center justify-center h-screen">

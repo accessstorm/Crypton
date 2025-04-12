@@ -35,8 +35,7 @@ export function Navbar() {
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+  const toggleTheme = (newTheme: "light" | "dark") => {
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
     localStorage.setItem("theme", newTheme);
@@ -74,6 +73,7 @@ export function Navbar() {
                   size="icon"
                   aria-label="Toggle theme"
                   className="mr-2"
+                  onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
                 >
                   {theme === "dark" ? (
                     <SunIcon className="h-5 w-5" />
@@ -83,10 +83,10 @@ export function Navbar() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
+                <DropdownMenuItem onClick={() => toggleTheme("light")}>
                   Light
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                <DropdownMenuItem onClick={() => toggleTheme("dark")}>
                   Dark
                 </DropdownMenuItem>
               </DropdownMenuContent>

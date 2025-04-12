@@ -219,12 +219,35 @@ function DashboardContent() {
         />
       </div>
 
+      {/* AI Agent Promo */}
+      <div className="flex items-center justify-between p-5 bg-primary/10 border border-primary/30 rounded-xl shadow-md">
+        <div className="flex items-center space-x-4">
+          <div className="hidden md:flex bg-primary/20 p-3 rounded-full">
+            <Brain className="h-8 w-8 text-primary" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold flex items-center">
+              <span className="mr-2">New!</span>
+              <span className="bg-primary/20 text-primary px-2 py-0.5 rounded text-sm">AI Assistant</span>
+            </h3>
+            <p className="text-sm text-muted-foreground">Get real-time analysis and insights on cryptocurrency trends directly from our AI-powered assistant.</p>
+          </div>
+        </div>
+        <a 
+          href="/dashboard/ai-agent" 
+          className="inline-flex items-center px-4 py-2 font-medium rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sm"
+        >
+          Try AI Assistant →
+        </a>
+      </div>
+
       {/* Main content tabs */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="markets">Markets</TabsTrigger>
-          <TabsTrigger value="sentiment">Sentiment & AI</TabsTrigger>
-          <TabsTrigger value="watchlist">Your Watchlist</TabsTrigger>
+          <TabsTrigger value="sentiment">Sentiment</TabsTrigger>
+          <TabsTrigger value="watchlist">Watchlist</TabsTrigger>
+          <TabsTrigger onClick={() => window.location.href='/dashboard/ai-agent'} value="ai">AI Agent</TabsTrigger>
         </TabsList>
         
         {/* Markets Tab */}
@@ -284,15 +307,30 @@ function DashboardContent() {
             />
           </div>
           
-          <div className="flex items-center justify-between p-4 bg-primary/10 rounded-lg">
-            <div className="flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
-              <span className="text-sm font-medium">AI Insights:</span>
-              <span className="text-sm ml-2">
-                Market sentiment appears to be cautiously optimistic with moderate volatility expected in the coming week.
-              </span>
+          <div className="flex flex-col p-4 bg-primary/10 rounded-lg space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <Brain className="w-5 h-5 mr-2" />
+                <span className="text-sm font-medium">AI Insights:</span>
+                <span className="text-sm ml-2">
+                  Market sentiment appears to be cautiously optimistic with moderate volatility expected in the coming week.
+                </span>
+              </div>
+              <BarChartHorizontal className="w-5 h-5 text-primary" />
             </div>
-            <BarChartHorizontal className="w-5 h-5 text-primary" />
+
+            <div className="flex items-center justify-between pt-3 border-t border-primary/20">
+              <div className="flex items-center">
+                <Brain className="w-5 h-5 mr-2 text-primary" />
+                <span className="text-sm font-medium">Need more detailed AI analysis?</span>
+              </div>
+              <a 
+                href="/dashboard/ai-agent" 
+                className="inline-flex items-center px-3 py-2 text-sm font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sm"
+              >
+                Try AI Agent →
+              </a>
+            </div>
           </div>
         </TabsContent>
         
